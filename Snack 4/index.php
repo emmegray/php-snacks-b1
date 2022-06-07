@@ -9,11 +9,10 @@ $array_numeri = [];
 
 for ($i = 0; $i < $len; $i++) {
   $num = mt_rand($min, $max);
-  if (in_array($num, $array_numeri)) {
-    $i--;
-  } else {
-    $array_numeri[] = $num;
+  while (in_array($num, $array_numeri)) {
+    $num = mt_rand($min, $max);
   }
+  $array_numeri[] = $num;
 }
 
 ?>
