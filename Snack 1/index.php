@@ -13,10 +13,10 @@ $squadra_casa = ['Olimpia Milano', 'Urania Milano', 'Sanga Milano', 'Aresium Mil
 $squadra_ospite = ['Virtus Bologna', 'Derthona Tortona', 'New Basket Brindisi', 'Pallacanestro Varese'];
 
 $partite_basket = [
-  ['casa' => $squadra_casa[0], 'ospite' => $squadra_ospite[0], 'punti' => [1, 0]],
-  ['casa' => $squadra_casa[1], 'ospite' => $squadra_ospite[1], 'punti' => [1, 0]],
-  ['casa' => $squadra_casa[2], 'ospite' => $squadra_ospite[2], 'punti' => [1, 0]],
-  ['casa' => $squadra_casa[3], 'ospite' => $squadra_ospite[3], 'punti' => [1, 0]],
+  ['squadra1' => $squadra_casa[0], 'squadra2' => $squadra_ospite[0], 'punteggio1' => 1, 'punteggio2' => 0],
+  ['squadra1' => $squadra_casa[1], 'squadra2' => $squadra_ospite[1], 'punteggio1' => 1, 'punteggio2' => 0],
+  ['squadra1' => $squadra_casa[2], 'squadra2' => $squadra_ospite[2], 'punteggio1' => 1, 'punteggio2' => 0],
+  ['squadra1' => $squadra_casa[3], 'squadra2' => $squadra_ospite[3], 'punteggio1' => 1, 'punteggio2' => 0],
 ];
 ?>
 
@@ -35,7 +35,7 @@ $partite_basket = [
   <ul>
     <?php for ($i = 0; $i < count($partite_basket); $i++) : ?>
       <li>
-        <?php echo $partite_basket[$i]['casa'] . ' - ' . $partite_basket[$i]['ospite'] . ' | ' . $partite_basket[$i]['punti'][0] . '-' . $partite_basket[$i]['punti'][1]; ?>
+        <?php echo $partite_basket[$i]['squadra1'] . ' - ' . $partite_basket[$i]['squadra2'] . ' | ' . $partite_basket[$i]['punteggio1'] . ' - ' . $partite_basket[$i]['punteggio2']; ?>
       </li>
     <?php endfor; ?>
   </ul>
